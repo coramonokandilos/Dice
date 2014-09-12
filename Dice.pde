@@ -11,10 +11,13 @@ void setup()
 void draw()
 {
 	background(0);
-	one.show();
-	two.show();
 	one.roll();
 	two.roll();
+	one.show();
+	two.show();
+	fill(255);
+	text(one.numberOfDots + two.numberOfDots, 50, 50);
+
 }
 void mousePressed()
 {
@@ -77,4 +80,7 @@ class Die //models one single dice cube
 			ellipse(myX +65, myY + 37, 10, 10);
 		}
 	}
+
+
 }
+

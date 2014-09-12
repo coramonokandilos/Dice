@@ -27,10 +27,20 @@ public void setup()
 public void draw()
 {
 	background(0);
-	one.show();
-	two.show();
 	one.roll();
 	two.roll();
+	one.show();
+	two.show();
+	fill(255);
+	text(one.numberOfDots + two.numberOfDots, 50, 50);
+
+
+	// one.score();
+
+
+
+
+	// int totalScore = one.numberOfDots + two.numberOfDots;
 }
 public void mousePressed()
 {
@@ -93,7 +103,18 @@ class Die //models one single dice cube
 			ellipse(myX +65, myY + 37, 10, 10);
 		}
 	}
+// void score()
+// {		
+// 	stroke(255);
+// 	while (mousePressed == true)
+// 	{
+// 		text(numberOfDots, 50, 50);
+// 	}
+	
+// }
+
 }
+
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Dice" };
     if (passedArgs != null) {
